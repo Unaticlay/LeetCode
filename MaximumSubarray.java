@@ -14,3 +14,20 @@ public int maxSubArray(int[] nums) {
         
         return max;
     }
+
+
+// Dynamic Programming, 1ms 37.4mb
+public int maxSubArray(int[] nums) {
+        if (nums == null || nums.length == 0) return 0;
+        int[] dp = new int[nums.length];
+        dp[0] = nums[0];
+        int max = nums[0];
+        
+        for (int i = 1; i < nums.length; i ++)
+        {
+            max = Math.max(max + nums[i], nums[i]);
+            dp[i] = Math.max(max, dp[i - 1]);
+        }
+        
+        return dp[nums.length - 1];
+    }
