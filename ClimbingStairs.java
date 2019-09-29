@@ -1,4 +1,5 @@
 // Dynamic programming, the idea is that for every n stairs, it is either F(N-2) + 2 or F(N-1) + 1, 0ms, 32.2mb
+// Can use only two int to save space instead of using an array
 public int climbStairs(int n) {
         if ((n == 0) || (n == 1))
             return 1;
