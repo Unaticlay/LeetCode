@@ -4,6 +4,7 @@
 // or
 //        best time to sell and n+1 days and a lowest day to buy before n + 1
 // 1ms, 36.7mb
+// Array is not necessary, just to illustrate the idea
 public int maxProfit(int[] prices) {
         if ((prices.length == 0) || (prices.length == 1))
             return 0;
