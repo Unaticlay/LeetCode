@@ -13,7 +13,7 @@ public int[] twoSum(int[] nums, int target) {
     }
 
 
-// Using hash table, 2ms, 38.2mb
+// Transform and conquer, Using hash table, 2ms, 38.2mb
 public int[] twoSum(int[] nums, int target) {
         HashMap<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i ++)
