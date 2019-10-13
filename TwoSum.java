@@ -11,3 +11,19 @@ public int[] twoSum(int[] nums, int target) {
         
         return new int[]{};
     }
+
+
+// Using hash table, 2ms, 38.2mb
+public int[] twoSum(int[] nums, int target) {
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < nums.length; i ++)
+        {
+            int min = Math.min(target - nums[i], nums[i]);
+            if (!map.containsKey(min))
+                map.put(min, i);
+            else if ((nums[map.get(min)] + nums[i]) == target)
+                return new int[] {map.get(min), i};
+        }
+        
+        return new int[]{};
+    }
